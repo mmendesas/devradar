@@ -23,8 +23,6 @@ routes.post('/devs', async (req, res) => {
     techs: techsArray
   });
 
-  console.log(name, avatar_url, bio);
-
   return res.json(dev);
 });
 

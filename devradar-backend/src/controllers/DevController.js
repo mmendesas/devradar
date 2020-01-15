@@ -39,5 +39,29 @@ module.exports = {
     }
 
     return res.json(dev);
+  },
+
+  async update(req, res) {
+    const { github_username, name, bio, techs, latitude, longitude } = req.body;
+
+    const dev = await Dev.findOne({ github_username });
+
+    if (!dev) {
+      return res.status(400).json({ error: 'User not found' });
+    }
+
+    const location = {
+      type: 'Point',
+      coordinates: [longitude, latitude]
+    };
+
+    const upDev = await dev.update({
+      name,
+      bio,
+      techs,
+      location
+    });
+
+    return res.json(upDev);
   }
 };

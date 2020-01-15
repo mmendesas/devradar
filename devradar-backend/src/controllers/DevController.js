@@ -63,5 +63,15 @@ module.exports = {
     });
 
     return res.json(upDev);
+  },
+
+  async delete(req, res) {
+    const dev = await Dev.find({ _id: req.params.id });
+    if (!dev) {
+      return res.status(400).json({ error: 'dev with this id doesn`t exists' });
+    }
+
+    dev.deleteOne({ _id: req.params.id });
+    return res.json();
   }
 };

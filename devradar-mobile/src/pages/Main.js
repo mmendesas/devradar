@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Image } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import { StyleSheet, Image, View, Text } from 'react-native';
+import MapView, { Marker, Callout } from 'react-native-maps';
 
 import {
   requestPermissionsAsync,
@@ -46,6 +46,13 @@ function Main() {
             uri: 'https://avatars0.githubusercontent.com/u/17890831?s=460&v=4'
           }}
         />
+        <Callout>
+          <View style={styles.callout}>
+            <Text style={styles.devName}>Marcio Mnedes</Text>
+            <Text style={styles.devBio}>Frontend Developer</Text>
+            <Text style={styles.devTechs}>Reac, ReactNative, Nodejs</Text>
+          </View>
+        </Callout>
       </Marker>
     </MapView>
   );
@@ -61,6 +68,20 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderWidth: 4,
     borderColor: '#fff'
+  },
+  callout: {
+    width: 260
+  },
+  devName: {
+    fontWeight: 'bold',
+    fontSize: 16
+  },
+  devBio: {
+    color: '#666',
+    marginTop: 5
+  },
+  devTechs: {
+    marginTop: 5
   }
 });
 

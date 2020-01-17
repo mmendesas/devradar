@@ -2,8 +2,8 @@ import React from 'react';
 
 import './global.css';
 import './App.css';
-
 import './Sidebar.css';
+import './Main.css';
 
 function App() {
   return (
@@ -39,7 +39,66 @@ function App() {
           <button type="submit">Salvar</button>
         </form>
       </aside>
-      <main></main>
+      <main>
+        <ul>
+          <li className="dev-item">
+            <header>
+              <img
+                src="https://avatars0.githubusercontent.com/u/17890831?s=460&v=4"
+                alt="mmendesas"
+              />
+              <div className="user-info">
+                <strong>Marcio Mendes</strong>
+                <span>ReactJs, React Native, Node.js</span>
+              </div>
+            </header>
+            <p>Always learning</p>
+            <a href="https://github.com/mmendesas">Acessar perfil no github</a>
+          </li>
+          <li className="dev-item">
+            <header>
+              <img
+                src="https://avatars0.githubusercontent.com/u/17890831?s=460&v=4"
+                alt="mmendesas"
+              />
+              <div className="user-info">
+                <strong>Marcio Mendes</strong>
+                <span>ReactJs, React Native, Node.js</span>
+              </div>
+            </header>
+            <p>Always learning</p>
+            <a href="https://github.com/mmendesas">Acessar perfil no github</a>
+          </li>
+          <li className="dev-item">
+            <header>
+              <img
+                src="https://avatars0.githubusercontent.com/u/17890831?s=460&v=4"
+                alt="mmendesas"
+              />
+              <div className="user-info">
+                <strong>Marcio Mendes</strong>
+                <span>ReactJs, React Native, Node.js</span>
+              </div>
+            </header>
+            <p>Always learning</p>
+            <a href="https://github.com/mmendesas">Acessar perfil no github</a>
+          </li>
+          <li className="dev-item">
+            <header>
+              <img
+                src="https://avatars0.githubusercontent.com/u/17890831?s=460&v=4"
+                alt="mmendesas"
+              />
+              <div className="user-info">
+                <strong>Marcio Mendes</strong>
+                <span>ReactJs, React Native, Node.js</span>
+              </div>
+            </header>
+            <p>Always learning</p>
+            <a href="https://github.com/mmendesas">Acessar perfil no github</a>
+          </li>
+        </ul>
+      </main>
     </div>
   );
 }

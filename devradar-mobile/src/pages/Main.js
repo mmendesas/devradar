@@ -20,6 +20,7 @@ import api from '../services/api';
 function Main({ navigation }) {
   const [devs, setDevs] = useState([]);
   const [currentRegion, setCurrentRegion] = useState(null);
+  const [techs, setTechs] = useState('');
 
   useEffect(() => {
     async function loadInitialPosition() {
@@ -51,7 +52,7 @@ function Main({ navigation }) {
       params: {
         latitude,
         longitude,
-        techs: 'react-native'
+        techs
       }
     });
 
@@ -105,6 +106,8 @@ function Main({ navigation }) {
           placeholderTextColor="#999"
           autoCapitalize="words"
           autoCorrect={false}
+          value={techs}
+          onChangeText={text => setTechs(text)}
         />
         <TouchableOpacity onPress={loadDevs} style={styles.loadButton}>
           <MaterialIcons name="my-location" size={20} color="#fff" />
@@ -141,7 +144,7 @@ const styles = StyleSheet.create({
   },
   searchForm: {
     position: 'absolute',
-    bottom: 20,
+    top: 20,
     left: 20,
     right: 20,
     zIndex: 5,
